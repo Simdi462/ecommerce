@@ -3,3 +3,125 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --font: "Poppins", sans-serif;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+.click-section{
+    display: flex;
+    gap: 10px;
+}
+.home-tx a{
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 50%;
+    color: #000;
+    text-decoration: none;
+}
+.slash{
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 50%;
+    color: #000;
+}
+.category-tx a{
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 50%;
+    color: #000;
+    text-decoration: none;
+}
+.item-tx a{
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    text-decoration: none;
+}
+.product-section{
+    padding: 45px 0px;
+}
+.product-details{
+
+}
+.product-items{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.four-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.item-one{
+    width: 170px;
+    height: 140px;
+}
+.item-one img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.item-two{
+    width: 170px;
+    height: 140px;
+}
+.item-two img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.item-three{
+    width: 170px;
+    height: 140px;
+}
+.item-three img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.item-four{
+    width: 170px;
+    height: 140px;
+}
+.item-four img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.item-main{
+    width: 500px;
+    height: 590px;
+}
+.item-main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.product-details-tx{
+
+}
+.details-info{
+
+}
+.details-info p{
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-style: 500;
+}
+.rating{
+    display: flex;
+}
