@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RCtiy1HQdDvlYgU8XrEOmDPxL2+wWjHz3GvmFfZMG3coGkTzSkZkl8OxWWfWbqA6FJxu79Q8cMZzG0eZQ9Z6rA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="product.css">
-    <title>Document</title>
+    <title>Veloura-Products-Details</title>
 </head>
 <body class="container">
     <div class="click-section">
@@ -32,23 +32,24 @@
         <div class="product-details">
             <div class="product-items">
                 <div class="four-items">
-                    <div class="item-one">
-                        <img src="Images/Red_dress2.jpg" alt="">
+                    <div class="item-one thumb">
+                        <img src="/ecommerce/Images/dresses/Red_dress2.jpg" alt="">
                     </div>
-                    <div class="item-two">
-                        <img src="Images/Red_dress3.jpg" alt="">
+                    <div class="item-two thumb">
+                        <img src="/ecommerce/Images/dresses/Red_dress3.jpg" alt="">
                     </div>
-                    <div class="item-three">
-                        <img src="Images/Red_dress4.jpg" alt="">
+                    <div class="item-three thumb">
+                        <img src="/ecommerce/Images/dresses/Red_dress4.jpg" alt="">
                     </div>
-                    <div class="item-four">
-                        <img src="images/Red_dress.jpg" alt="">
+                    <div class="item-four thumb">
+                        <img src="/ecommerce/Images/dresses/Red_dress.jpg" alt="">
                     </div>
                 </div>
                 <div class="item-main">
-                    <img src="images/Red_dress.jpg" alt="">
+                    <img id="mainImage" src="/ecommerce/Images/dresses/Red_dress.jpg" alt="">
                 </div>
             </div>
+            
             <div class="product-details-tx">
                 <div class="details-info">
                     <p class="havic">Havic HV G-92 Gamepad</p>
@@ -107,9 +108,10 @@
                         <div class="item-quantity">
                             <div class="quantity">
                                 <button class="minus">-</button>
-                                <button class="two">2</button>
+                                <span class="two">2</span>
                                 <button class="plus">+</button>
                             </div>
+
                             <div class="buy"><button>Buy Now</button></div>
                             <div class="like"><i class="fa-regular fa-heart" style="color: #000;"></i></div>
                         </div>
@@ -145,5 +147,7 @@
             </div>
         </div>
     </section>
+
+    <script src="/ecommerce/product.js"></script>
 </body>
 </html>
