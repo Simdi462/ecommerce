@@ -120,9 +120,8 @@
     border: 2px solid transparent;
 }
 .thumb img.active {
-    border: 2px solid #000000; /* red border when selected */
+    box-shadow: 2px 2px 5px 1px black;
 }
-
 .product-details-tx{
     display: flex;
     flex-direction: column;
@@ -193,15 +192,13 @@
 .item-colour-opt{
     display: flex;
     gap: 3px;
+    cursor: pointer;
 }
 .colour-blue{
     background-color: #000000;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-}
-.colour-blue.active-colour{
-    border: 1px solid white;
 }
 .colour-red{
     background-color: red;
