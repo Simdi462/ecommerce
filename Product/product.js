@@ -1,4 +1,3 @@
-// PRODUCT PAGE
 const minusBtn = document.querySelector(".minus");
 const plusBtn = document.querySelector(".plus");
 const quantityDisplay = document.querySelector(".two");
@@ -14,7 +13,7 @@ minusBtn.addEventListener("click", () => {
     }
 });
 
-
+//Item sizes
     const sizeButtons = document.querySelectorAll('.sizes button');
     sizeButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -25,7 +24,7 @@ minusBtn.addEventListener("click", () => {
         });
     });
 
-
+//Images
     const thumbnails = document.querySelectorAll('.thumb img');
     const mainImage = document.getElementById('mainImage');
     thumbnails.forEach(img => {
@@ -39,6 +38,4 @@ minusBtn.addEventListener("click", () => {
         });
     });
     document.querySelector('.thumb img[src="images/Red_dress.jpg"]').classList.add('active');
-
-    
 

@@ -1,5 +1,4 @@
 const form = document.querySelector("form");
-    // Save Changes
     form.addEventListener("submit", function (e) {
         e.preventDefault();
         let allFilled = true;
@@ -28,8 +27,8 @@ const form = document.querySelector("form");
     document.querySelector(".cancel-btn").addEventListener("click", function () {
         Array.from(form.elements).forEach(input => {
             if (input.tagName === "INPUT" && input.type !== "button" && input.type !== "submit") {
-                input.value = ""; // Clear the input
-                input.style.border = ""; // Reset borders if there was an error
+                input.value = "";
+                input.style.border = "";
             }
         });
     });

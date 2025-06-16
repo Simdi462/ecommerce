@@ -1,5 +1,4 @@
 const form = document.querySelector("form");
-    // Save Changes
     form.addEventListener("submit", function (e) {
         e.preventDefault();
         let allFilled = true;
