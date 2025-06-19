@@ -3,55 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Sign Up | eCommerce</title>
   <link rel="stylesheet" href="/ecommerce/charis login/Login.css">
-  <title>Veloura-Login | Sign up</title>
 </head>
 <body>
-  <div class="login-sec container">
-    <div class="login-img">
-      <img src="/ecommerce/Images/Side Image.png" alt="Login Illustration" />
-    </div>
-    <div id="login-box">
-      <h1>Log in to Exclusive</h1>
-      <p>Enter your details below</p>
-      <div class="login-input">
+
+  <div class="main-content">
+    <img src="Side Image.png" alt="Side Image" class="side-image"/>
+
+    <div class="container">
+      <div id="login-box">
+        <h2>Login</h2>
         <div class="form-group">
-          <input type="email" placeholder="Email or Phone Number">
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password">
-        </div>
-      </div>
-      <button class="btn">Log In</button>
-      <div class="forgot-password">
-        <a href="#">Forgot Password?</a>
-      </div>
-      <div class="toggle-link">
-        Don’t have an account? <a href="#" onclick="toggleForm()">Sign up</a>
-      </div>
-    </div>
-  
-    <div id="signup-box" class="hidden">
-      <h1>Create an account</h1>
-      <p>Enter your details below</p>
-      <div class="login-input">
-        <div class="form-group">
-          <input type="text" placeholder="Enter your full name">
-        </div>
-        <div class="form-group">
+          <label>Email</label>
           <input type="email" placeholder="Enter your email">
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Create a password">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password">
+        </div>
+        <button class="btn">Login</button>
+        <div class="toggle-link">
+          Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a>
         </div>
       </div>
-      <button class="btn">Create an account</button>
-      <div class="toggle-link">
-        Already have an account? <a href="#" onclick="toggleForm()">Login</a>
+
+      <div id="signup-box" class="hidden">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create a password">
+        </div>
+        <button class="btn">Sign Up</button>
+        <div class="toggle-link">
+          Already have an account? <a href="#" onclick="toggleForm()">Login</a>
+        </div>
       </div>
     </div>
   </div>
-  
-<script src="/ecommerce/charis login/login.js"></script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column1">
+        <h3>Exclusive</h3>
+        <h4>Subscribe</h4>
+        <p>Get 50% off your first order</p>
+      </div>
+      <div cl
+      ass="footer-column1">
+        <h3>Support</h3>
+        <p>Augustine University</p>
+        <p>exclusive@gmail.com</p>
+        <p>+2349073219342</p>
+      </div>
+      <div class="footer-column1">
+        <h3>Account</h3>
+        <P>My Account</P>
+        <p>Login / Register</p>
+        <p>Cart</p>
+        <p>Wishlist</p>
+        <p>Shop</p>
+      </div>
+            <div class="footer-column1">
+        <h3>Quick Link</h3>
+        <p>Privacy Policy</p>
+        <p>Terms Of Use</p>
+        <p>FAQ</p>
+        <P>Contact</P>
+      </div>
+      <div class="footer-column1">
+        <h3>Download App</h3>
+        <p class="grey-text">Save $3 with App New User Only</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+        <p>@ Copyright Rimel 2022. All rights reserved</p>
+      </div>
+  </footer>
+
+  <script>
+    function toggleForm() {
+      const loginBox = document.getElementById('login-box');
+      const signupBox = document.getElementById('signup-box');
+      loginBox.classList.toggle('hidden');
+      signupBox.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
