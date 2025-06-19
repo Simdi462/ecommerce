@@ -15,23 +15,15 @@ const form = document.querySelector("form");
                     setTimeout(() => {
                         input.style.border = "";
                         input.placeholder = originalPlaceholder;
-                    }, 2000);
+                    }, 5000);
                 }
             }
         });
         if (allFilled) {
-            showSuccessMessage("Saved successfully!");
+            showSuccessMessage("Successfully Sent!");
         }
     });
-    // Cancel button clears input values
-    document.querySelector(".cancel-btn").addEventListener("click", function () {
-        Array.from(form.elements).forEach(input => {
-            if (input.tagName === "INPUT" && input.type !== "button" && input.type !== "submit") {
-                input.value = "";
-                input.style.border = "";
-            }
-        });
-    });
+
     function showSuccessMessage(message) {
         const toast = document.createElement("div");
         toast.textContent = message;
@@ -49,7 +41,6 @@ const form = document.querySelector("form");
         toast.style.transition = "opacity 0.4s ease";
 
         document.body.appendChild(toast);
-
         setTimeout(() => {
             toast.style.opacity = "1";
         }, 100);
