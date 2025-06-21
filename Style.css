@@ -1,0 +1,266 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+header input {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.sidebar {
+  width: 200px;
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.banner {
+  background: #000;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.banner button {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.women-sales, .category-section, .best-selling, .new-arrival, .features {
+  margin-bottom: 40px;
+}
+
+.products, .best-selling-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* justify-content: center; */
+}
+.women-sales{
+  
+}
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.women-product{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  width: 120px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.category-item.active {
+  background: red;
+  color: #fff;
+  border-color: red;
+}
+
+.categories {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.new-arrival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.new-arrival-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.new-arrival-card.large {
+  grid-column: span 2;
+}
+
+.new-arrival-card img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+}
+
+.overlay button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: red;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  text-align: center;
+  max-width: 200px;
+}
+
+.footer-section {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-columns div {
+  min-width: 150px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE PART */
+@media (max-width: 1024px) {
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  .banner {
+    padding: 30px 20px;
+  }
+
+  .product {
+    width: 45%;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-arrival-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  header nav a {
+    margin: 5px;
+  }
+
+  .product {
+    width: 90%;
+  }
+
+  .category-item {
+    width: 45%;
+  }
+}

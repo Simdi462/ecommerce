@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+:root{
+    --font: "Poppins", sans-serif;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 40px 0px;
+    font-family: "Poppins", sans-serif;
+}
+.welcome-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-tx {
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.5;
+    color: #0000005e;
+    text-decoration: none;
+}
+.contact-tx {
+    font-size: 14px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+}
+.slash {
+    font-size: 14px;
+    color: #000;
+    opacity: 0.7;
+    margin: 0 5px;
+}
+.whole-contact{
+    margin-top: 50px;
+}
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 4px;
+    padding:40px;
+    box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.05);
+}
+.sidebar-title-one{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar-group-call{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid #dddddd;
+    padding: 0px 0px 20px 0px;
+    width: fit-content;
+}
+.call-icon{
+    background-color: #d84444;
+    border-radius: 50%;
+    padding: 7px;
+    color: #fff;
+    font-size: 22px;
+}
+.sidebar-title-one p{
+    font-size: 15px;
+    font-weight: 600;
+}
+.call-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.call-info p{
+    font-size: 12px;
+}
+.form-section {
+    flex: 1;
+    background: #fff;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.05);
+}
+.sidebar-title-two{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.email-icon{
+    background-color: #d84444;
+    border-radius: 50%;
+    padding: 7px;
+    color: #fff;
+    font-size: 22px;
+}
+.sidebar-title-two p{
+    font-size: 15px;
+    font-weight: 600;
+}
+.email-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 220px;
+}
+.email-info p {
+    font-size: 12px;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+.sidebar-group-email{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 10px 0px;
+}
+.contact-form-section{
+    background: #fff;
+    padding: 60px 60px 20px 60px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.05);
+}
+.contact-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    gap: 25px;
+}
+.three-input{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: fit-content;
+}
+.input-name input{
+    padding: 10px 0px 10px 10px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+.input-email input{
+    padding: 10px 0px 10px 10px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+.input-phone input{
+    padding: 10px 0px 10px 10px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+.input-message textarea{
+    padding: 10px 10px 50px 10px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+}
+.send{
+    display: flex;
+    justify-content: right;
+}
+.send button{
+    background-color: #d84444;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
