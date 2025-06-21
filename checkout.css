@@ -1,0 +1,30 @@
+body{
+    font-family: monospace;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 90px;
+    padding: 20px;
+}
+.container .right{
+    background-color: #5358b3;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff;
+    width: 60%;
+}
+.list img{
+    height: 70px;
+}
+.container .right .form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-bottom: 1px solid #7a7fe2;
+    padding-bottom: 20px;
+}
+.container .form .group:nth-child(-n+3){
+    grid-column-start: 1;
+    grid
+}
