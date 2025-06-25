@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+:root{
+    --font: "Poppins", sans-serif;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 40px 0px;
+    font-family: "Poppins", sans-serif;
+}
+.welcome-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-tx {
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.5;
+    color: #0000005e;
+    text-decoration: none;
+}
+.account-tx {
+    font-size: 14px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+}
+.slash {
+    font-size: 14px;
+    color: #000;
+    opacity: 0.7;
+    margin: 0 5px;
+}
+.welcome-tx p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+}
+.welcome-tx p span {
+    color: #d84444;
+    font-weight: 400;
+}
+.whole-account{
+    display: flex;
+    margin-top: 50px;
+    gap: 50px;
+}
+.account-section {
+    display: flex;
+    flex-direction: row;
+}
+.account-tx{
+    color: #000;
+}
+  /* Sidebar Menu */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar-group ul{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.sidebar-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+.sidebar-title-one{
+    font-weight: 600;
+    padding: 0px 0px 10px 0px;
+}
+.sidebar-title-two{
+    font-weight: 600;
+    padding: 0px 0px 10px 0px;
+}
+.sidebar-title-three{
+    font-weight: 600;
+    padding: 0px 0px 10px 0px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li a{
+    font-size: 14px;
+    color: #6f6f6f;
+    cursor: pointer;
+    text-decoration: none;  
+}
+.sidebar ul li .active{
+    color: #d84444;
+    font-weight: 500;
+}  
+  /* Form Section */
+.form-section {
+    flex: 1;
+    background: #fff;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.05);
+}
+.form-section h2 {
+    color: #d84444;
+    padding: 0px 0px 15px 0px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns:repeat(2, 2fr);
+    gap: 25px;
+}  
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+.input-group label {
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: #000;
+    font-weight: 600;
+}
+.input-group input {
+    padding: 10px 0px 10px 10px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+  /* Password Fields */
+.form-block {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-block p {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    padding: 15px 0px 0px 0px;
+}
+.form-block input{
+    padding: 10px 0px 10px 10px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+  /* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}  
+.cancel-btn {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+}  
+.save-btn {
+    background-color: #d84444;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}  
+.return-tx{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+.add-form-section{
+    flex: 1;
+    background: #fff;
+    padding: 60px 60px 20px 60px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.05);
+}
+.add-form-section h2{
+    color: #d84444;
+}
+.address-sec{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 20px 0px;
+    margin-top: 15px;
+}
+.recent-add{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.recent-add-name{
+    display: flex;
+    gap: 10px;
+}
+.used{
+    font-size: 12px;
+    background-color: #d84444;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 4px;
+    width: fit-content;
+}
+.name{
+    font-size: 15px;
+    font-weight: 600;
+}
+.num{
+    color: #6f6f6f;
+    font-size: 15px;
+}
+.one-add{
+    border-bottom: 2px solid #dddddda6;
+    padding: 0px 0px 15px 0px;
+}
+.one-add p{
+    font-size: 15px;
+}
+.recent-add-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recent-add-options
+.default{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.default p{
+    font-size: 15px;
+    color: #000000;
+    font-weight: 500;
+}
+.default input{
+    width: 18px;
+    height: 18px;
+}
+.de-co-ed{
+    display: flex;
+    gap: 5px;
+}
+.de-co-ed p{
+    font-size: 15px;
+    color: #6f6f6f;
+    text-decoration: none;
+}
+.de-co-ed span{
+    color: #6f6f6f;
+    font-size: 15px;
+}
+.new-add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.new-add button{
+    background-color: #d84444;
+    color: #fff;
+    border: none;
+    padding: 15px 50px;
+    border-radius:10px;
+    font-size: 15px;
+}
+.payment-form-section{
+    flex: 1;
+    background: #fff;
+    padding: 60px 60px 20px 60px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.05);
+}
+.payment-form-section h2{
+    color: #d84444;
+}
+.cards p{
+    font-size: 14px;
+}
+.blue-pay{
+    background-color: rgb(1, 1, 126);
+    padding: 15px 15px;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+.pay-info{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pay-info-card{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.pay-info-img{
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.pay-info-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.pay-info-card p{
+    color: #fff;
+}
+.secure-section{
+    margin-top: 20px;
+    border-top: 2px solid #ddd;
+}
+.verve{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #6f6f6f;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+.verve img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.visa{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #6f6f6f;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+.visa img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.master{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #6f6f6f;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+.master img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ameri-ex{
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+}
+.ameri-ex img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.discover{
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+}
+.discover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.maestro{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #6f6f6f;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+.maestro img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.diner-club{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #6f6f6f;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+.diner-club img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.jcb{
+    width: 70px;
+    height: 35px;
+    border: 1px solid #6f6f6f;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+.jcb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.secure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0px 80px 0px;
+}
+.secure-pay{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.secure-icon{
+    color: #005e00;
+    font-size: 20px;
+}
+.secure-pay p{
+    color: #000000;
+    font-size: 15px;
+}
+.convenient-pay{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.convenient-icon{
+    color: #005e00;
+    font-size: 20px;
+}
+.convenient-pay p{
+    color: #000000;
+    font-size: 15px;
+}
+.cre-deb-pay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 90px;
+}
+.cre-deb-pay button{
+    background-color: #d84444;
+    color: #fff;
+    border: none;
+    padding: 20px 0px;
+    border-radius:15px;
+    font-size: 16px;
+    width: 100%;
+}
+.payment-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0px 0px 0px;
+}
