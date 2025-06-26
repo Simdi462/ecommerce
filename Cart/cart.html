@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="/ecommerce/Cart/cart.css">
+    <title>Veloura | Cart</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+          <div class="logo">
+            <p><span>V</span>eloura</p>
+          </div>
+          <ul>
+            <li><a href="/ecommerce/index.html">Home</a></li>
+            <li><a href="/ecommerce/Contact/contact.html">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="/ecommerce/charis login/login.html">Sign Up</a></li>
+          </ul>
+          <div class="input-icon">
+            <input type="text" placeholder="What are you looking for?">
+            <div class="like">
+              <iconify-icon icon="uil:heart"></iconify-icon>
+            </div>
+            <div class="cart">
+                <a href="/ecommerce/Cart/cart.html"><iconify-icon icon="mdi-light:cart"></iconify-icon><a><span class="zero">0</span>
+            </div>
+            <div class="account">
+              <a href="/ecommerce/accounts/account.html"><iconify-icon icon="guidance:user-1"></iconify-icon></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <section class="container">
+        <div class="empty">
+            <h2 class="you">Your cart is empty</h2>
+        </div>
+    </section>
+    <div class="container">
+        <table class="cart-sec">
+            <!--
+            <tbody>
+                <tr>
+                    <td class="product-info">
+                        <div class="product-info-img">
+                            <img src="/ecommerce/Images/accesories/like and comment if you like gurliees🤍 (1).jpg" alt="LCD Monitor">
+                        </div>
+                        <div class="product-info-tx">
+                            <p>Earings</p>
+                        </div>
+                    </td>
+                    <td>$650</td>
+                    <td>
+                        <select>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>
+                    </td>
+                    <td>$650</td>
+                </tr>
+            <tr>
+                <td class="product-info">
+                    <div class="product-info-img">
+                        <img src="/ecommerce/Images/dresses/Maxidress1.jpeg" alt="Gamepad">
+                    </div>
+                    <div class="product-info-tx">
+                        <p>Maxi Dress</p>
+                    </div>
+                </td>
+                <td>$550</td>
+                <td>
+                    <select>
+                        <option>01</option>
+                        <option selected>02</option>
+                        <option>03</option>
+                    </select>
+                </td>
+                <td class= "sub-total">$1100</td>
+            </tr>
+            </tbody> -->
+        </table>
+        
+        <div class="buttons">
+            <button><a href="/ecommerce/index.html">Return To Shop</a></button>
+            <button>Update Cart</button>
+        </div>
+        
+        <div class="cart-layout">
+            <div class="coupon-section">
+                <div>
+                    <input type="text" placeholder="Coupon Code">
+                </div>
+                <div class="apply-btn">
+                    <button>Apply Coupon</button>
+                </div>
+            </div>
+        
+            <div class="cart-total">
+                <h3>Cart Total</h3>
+                <div><span>Subtotal:</span><span>$1750</span></div>
+                <div><span>Shipping:</span><span>Free</span></div>
+                <div><strong>Total:</strong><strong>$1750</strong></div>
+                <button class="checkout-btn">Process to checkout</button>
+            </div>
+        </div>
+    </div>
+    <script src="/ecommerce/Cart/cart.js"></script>
+</body>
+</html
