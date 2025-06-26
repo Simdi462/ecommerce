@@ -171,3 +171,48 @@ h1 {
     font-size: 14px;
     color: rgb(48, 48, 255);
 }
+
+
+    footer.footer {
+      background-color: black;
+      color: white;
+      padding: 1rem;
+      text-align: left;
+    }
+    .footer-container{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+      line-height: 30px;
+    }
+    .grey-text{
+      color: grey;
+      
+    }
+    .footer-bottom{
+      color: grey;
+    }
+
+    .iconify-icon{
+        size: 50px;
+    }
+    .social-icons{
+        font-size: 30px;
+    }
+    @media (max-width: 1024px) {
+      .side-image {
+        width: 1000%;
+        height: auto;
+        margin: 0 0 2rem 0;
+      }
+
+      .main-content {
+        flex-direction: column;
+      }
+    }
+
+
+
+
+
+}
