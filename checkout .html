@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-section, .summary-section {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+    .form-section {
+      flex: 2;
+      min-width: 300px;
+    }
+    .summary-section {
+      flex: 1;
+      min-width: 280px;
+      border-left: 1px solid #ccc;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .coupon {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .coupon input {
+      flex: 1;
+    }
+    .coupon button, .order-button {
+      padding: 10px 20px;
+      background: #e53935;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .order-button {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .product-summary {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .product-summary img {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+    }
+    .total, .subtotal {
+      font-weight: bold;
+    }
+    .payment-methods {
+      margin: 15px 0;
+    }
+    .save-info {
+      margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .summary-section {
+        border-left: none;
+        border-top: 1px solid #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Billing Details</h2>
+      <input type="text" placeholder="First Name*" required>
+      <input type="text" placeholder="Company Name">
+      <input type="text" placeholder="Street Address" required>
+      <input type="text" placeholder="Apartment, floor, etc. (optional)">
+      <input type="text" placeholder="Town/City" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email Address" required>
+      <div class="save-info">
+        <input type="checkbox" id="saveInfo" checked>
+        <label for="saveInfo">Save this information for faster check-out next time</label>
+      </div>
+    </div>
+
+    <div class="summary-section">
+      <div class="product-summary">
+        <div style="display: flex; align-items: center;">
+          <img src="burgundy_dress.jpg" alt="">
+          <span>Burgundy Dress</span>
+        </div>
+        <span>$550</span>
+      </div>
+      <div class="product-summary">
+        <div style="display: flex; align-items: center;">
+          <img src="black_hoodie.jpg" alt="">
+          <span>Black Hoodie</span>
+        </div>
+        <span>$1200</span>
+      </div>
+      <hr>
+      <div class="product-summary subtotal">
+        <span>Subtotal:</span>
+        <span>$1750</span>
+      </div>
+      <div class="product-summary">
+        <span>Shipping:</span>
+        <span>Free</span>
+      </div>
+      <div class="product-summary total">
+        <span>Total:</span>
+        <span>$1750</span>
+      </div>
+      <div class="payment-methods">
+        <label><input type="radio" name="payment" value="bank"> Bank</label><br>
+        <label><input type="radio" name="payment" value="cod" checked> Cash on delivery</label><br>
+        <img src="master card.png" width="40">
+        <img src="visa card.png" width="40">
+        <img src="amex card.png" width="40">
+      </div>
+      <div class="coupon">
+        <input type="text" placeholder="Coupon Code">
+        <button>Apply Coupon</button>
+      </div>
+      <button class="order-button">Place Order</button>
+    </div>
+  </div>
+</body>
+</html>
