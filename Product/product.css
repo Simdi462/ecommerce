@@ -71,7 +71,19 @@
   }
 .click-section{
     display: flex;
-    gap: 10px;
+    gap: 7px;
+    align-items: center;
+}
+.zero{
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    background-color:#d84444;
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 50%;
+    margin-left: -10px;
+    z-index: 1;
 }
 .home-tx a{
     font-family: "Poppins",sans-serif;

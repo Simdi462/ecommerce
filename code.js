@@ -1,22 +1,5 @@
-    // // Example: Basic Category Active Toggle
-    // const categories = document.querySelectorAll('.category-item');
 
-    // categories.forEach(category => {
-    //   category.addEventListener('click', () => {
-    //     categories.forEach(c => c.classList.remove('active'));
-    //     category.classList.add('active');
-    //   });
-    // });
-    
-    // // Search Functionality (basic placeholder)
-    // const searchInput = document.querySelector('header input');
-    // searchInput.addEventListener('keyup', (e) => {
-    //   if (e.key === 'Enter') {
-    //     alert(`You searched for: ${searchInput.value}`);
-    //   }
-    // });    
-
-    const products = [
+const allProducts = [
       {
         id: "Prod-1",
         img1: "/ecommerce/Images/dresses/first1.jpg",
@@ -338,39 +321,122 @@
         label: "Elegant dress",
         price: "$220"
       },
+      {
+        id: "prod-36",
+        img1: "/ecommerce/Images/dresses/pink_cargo3.jpeg",
+        label: "Pink Cargo",
+        price: "$330"
+      },
+      {
+        id: "best-2",
+        img1: "/ecommerce/Images/footwear/redshoes.jpeg",
+        label: "Red Shoes",
+        price: "$530"
+      },
+      {
+        id: "best-3",
+        img1: "/ecommerce/Images/accesories/download (1).jpg",
+        label: "Gold Earrings",
+        price: "$230"
+      },
+      {
+        id: "prod-16",
+        img1: "/ecommerce/Images/dresses/Maxidress1.jpeg",
+        label: "Maxi Dress",
+        price: "$530"
+      },
+      {
+        id: "best-5",
+        img1: "/ecommerce/Images/footwear/Tom boy shoes.png",
+        label: "Tom Boy Shoes",
+        price: "$530"
+      }
     ]
+// Get selected product based on URL
+const productId = new URLSearchParams(location.search).get("id");
+const product = allProducts.find((p) => p.id === productId);
 
-    const swiperContainers = document.querySelectorAll(".myproductSwiper");
-    // Define chunk size (10 products per Swiper)
-    const chunkSize = 10;
-    // Break the products array into chunks of 10
-    for (let i = 0; i < swiperContainers.length; i++) {
-      const container = swiperContainers[i];
-      const productChunk = products.slice(i * chunkSize, (i + 1) * chunkSize);
+// Display Best Products (5 per section)
+const sections = document.querySelectorAll(".best-products");
+const best = [
+  allProducts.find((p) => p.id === "Prod-36"),
+  allProducts.find((p) => p.id === "best-2"),
+  allProducts.find((p) => p.id === "best-3"),
+  allProducts.find((p) => p.id === "prod-16"),
+  allProducts.find((p) => p.id === "best-5"),
+];
+const perSection = 5;
 
-      productChunk.forEach(product => {
-        const slide = document.createElement("swiper-slide");
-        slide.classList.add("product-slide");
-        slide.innerHTML = `
-          <div class="product">
-            <div class="product-img">
-              <img src="${product.img1}" alt="${product.label}">
-            </div>
-            <div class="product-info">
-              <p class="product-name">${product.label}</p>
-              <p class="product-price">${product.price} <del>$360</del></p>
-              <div class="stars">
-                <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
-                <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
-                <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
-                <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
-                <iconify-icon icon="ic:round-star" style="color: #838280;"></iconify-icon>
-                <div class="product-quan"><p>(65)</p></div>
-              </div>
-            </div>
+sections.forEach((section, idx) => {
+  const chunk = best.slice(idx * perSection, idx * perSection + perSection);
+
+  chunk.forEach((product) => {
+    const stars = Array.from({ length: 5 }, (_, i) => {
+      const color = i < (product.rating || 4) ? "#ffad33" : "#838280";
+      return `<iconify-icon icon="ic:round-star" style="color: ${color};"></iconify-icon>`;
+    }).join("");
+
+    const productCard = document.createElement("div");
+    productCard.classList.add("best-product");
+    productCard.innerHTML = `
+      <div class="product-img">
+        <img src="${product.img1}" alt="${product.label}">
+      </div>
+      <div class="best-tx">
+        <div class="best-product-name">
+          <p>${product.label}</p>
+        </div>
+        <div class="best-product-price">
+          <p>${product.price}</p>
+          <p><del>${product.oldPrice || ""}</del></p>
+        </div>
+        <div class="stars">
+          ${stars}
+          <div class="product-quan"><p>(${product.quantity || 0})</p></div>
+        </div>
+      </div>
+    `;
+
+    productCard.addEventListener("click", () => {
+      window.location.href = `/ecommerce/Product/product.html?id=${product.id}`;
+    });
+
+    section.appendChild(productCard);
+  });
+});
+
+// Swiper Slides - Display products in swiper containers
+const swiperContainers = document.querySelectorAll(".myproductSwiper");
+const chunkSize = 10;
+
+swiperContainers.forEach((container, i) => {
+  const productChunk = allProducts.slice(i * chunkSize, (i + 1) * chunkSize);
+
+  productChunk.forEach((product) => {
+    const slide = document.createElement("swiper-slide");
+    slide.classList.add("product-slide");
+    slide.innerHTML = `
+      <div class="product">
+        <div class="product-img">
+          <img src="${product.img1}" alt="${product.label}">
+        </div>
+        <div class="product-info">
+          <p class="product-name">${product.label}</p>
+          <p class="product-price">${product.price} <del>$360</del></p>
+          <div class="stars">
+            <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
+            <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
+            <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
+            <iconify-icon icon="ic:round-star" style="color: #ffad33;"></iconify-icon>
+            <iconify-icon icon="ic:round-star" style="color: #838280;"></iconify-icon>
+            <div class="product-quan"><p>(65)</p></div>
           </div>
-        `;
-        container.appendChild(slide);
-      });
-    }
-    
+        </div>
+      </div>
+    `;
+    slide.querySelector(".product").addEventListener("click", () => {
+      window.location.href = `/ecommerce/Product/product.html?id=${product.id}`;
+    });
+    container.appendChild(slide);
+  });
+});

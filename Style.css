@@ -326,6 +326,12 @@ swiper-container::part(button-next):hover {
   gap: 0px;
   padding: 15px 0px 0px 0px ;
 }
+.best-products{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
 .best-product-name{
   font-size: 15px;
   font-weight: 600;
